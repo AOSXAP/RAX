@@ -6,10 +6,11 @@
 
 ### Use "npm start" to preview RAX. 
 
+Feel free to contribute to the repo.
+
 Imgur Gallery : https://imgur.com/gallery/cjIU8Mh
 
 
 <img src="https://i.imgur.com/jYRfLuw.png"></img>
 <img src="https://i.imgur.com/qifYn7r.png"></img>
 
-Feel free to contribute to the repo.
