@@ -11,6 +11,7 @@ const save = path.join(__dirname,"/History",'/history.json');
 //Menu for opening files
 async function Menu(){
     let pathx = path.dirname(__dirname);
+
     if(!historyFile) {historyFile = []; Menu();}
     
     //Selection Menu
@@ -60,11 +61,12 @@ function load(){
     //last 3 items from history are displayed on main menu
     if(fileHistoryV){
         for(let i = 1;i<=3;i++){
-            const pathx = historyFile[historyFile['length']-i].path;
-            var node = document.createElement("H6"); 
-            var textnode = document.createTextNode(pathx);
-            node.appendChild(textnode);
-            document.getElementById("last").appendChild(node);
+                const pathx = historyFile[historyFile['length']-i].path;
+                var node = document.createElement("H6"); 
+                var textnode = document.createTextNode(pathx);
+                node.appendChild(textnode);
+                document.getElementById("last").appendChild(node);
+        
         }
     }
 

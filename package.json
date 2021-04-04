@@ -33,15 +33,12 @@
         {
           "name": "@electron-forge/maker-deb",
           "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
         }
       ]
     }
   },
   "dependencies": {
+    "electron-builder": "^22.10.5",
     "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
