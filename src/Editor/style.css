@@ -1,6 +1,4 @@
-*{
-    background-color: #292828;
-}
+*{background-color: #292828}
 
 ::-webkit-scrollbar{
     display: none;
@@ -25,18 +23,14 @@ body{
     font-size: 13px;
 }
 
-.txtx{
-    padding: 20px;
-}
+.txtx{padding: 20px}
 
 .btns{
     display: flex;
     justify-content: space-around;
 }
 
-.btns button{
-    margin-right: 10px;
-}
+.btns button{margin-right: 10px}
 
 #output{
     padding: 5px 20px;
@@ -57,9 +51,7 @@ body{
 
 }
 
-#inp::placeholder{
-    color:#00c1a4
-}
+#inp::placeholder{color:#00c1a4}
 
 .idxx{
     padding: 0px 20px;
@@ -67,9 +59,7 @@ body{
     font-size: 18px;
 }
 
-.int{
-    color: blueviolet;
-}
+.int{ color: blueviolet; }
 
 .outp{
     display: flex;
@@ -111,7 +101,6 @@ body{
     border: 0;
 }
 
-#list p{
-    transform: translateY(-35px);
-}
+#list p {transform: translateY(-35px);}
+
 

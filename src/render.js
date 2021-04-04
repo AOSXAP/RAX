@@ -12,7 +12,6 @@ const save = path.join(__dirname,"/History",'/history.json');
 async function Menu(){
     let pathx = path.dirname(__dirname);
     if(!historyFile) {historyFile = []; Menu();}
-    console.log(historyFile)
     
     //Selection Menu
     let options = {
@@ -27,8 +26,6 @@ async function Menu(){
     
     //Select a file, then get path of it
     const selectedPaths = await dialog.showOpenDialog(remote.getCurrentWindow(),options);
-    console.log(selectedPaths);
-
     const newOBJ = {path:selectedPaths.filePaths[0],time:Date.now()}
     
     //If no error

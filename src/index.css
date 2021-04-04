@@ -70,3 +70,11 @@ body {
   color:#00c1a4;
   font-size: 20px;
 }
+
+.gtxt{
+  color: #00c1a4;
+}
+
+.gtxt:hover{
+  color: white;
+}
