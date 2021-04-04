@@ -1,4 +1,4 @@
-*{background-color: #292828}
+*{background-color: #292828;font-family: monospace;}
 
 ::-webkit-scrollbar{
     display: none;

@@ -9,7 +9,8 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "winx":"electron-forge package --platform win32"
   },
   "keywords": [],
   "author": "aosx",
@@ -38,7 +39,6 @@
     }
   },
   "dependencies": {
-    "electron-builder": "^22.10.5",
     "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
