@@ -1,5 +1,5 @@
 # RAX
-<h2>An Open Source C++ IDE made with web tehnologies> </h2>
+<h3>An Open Source C++ IDE made via web tehnologies.</h3>
 
 Use "npm install" to get all dependencies. You should also have g++ compiler installed.
 
