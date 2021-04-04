@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+</head>
+<body  style="overflow: hidden" onload="load()">
+    <h1 id="sendxx" class="idxx">RAX</h1>
+    <div class="txtx">
+        <textarea contenteditable="true" class="txtarea textarea has-fixed-size is-primary"  id="txtarea">
+
+        </textarea>
+    </div>
+
+
+    <div class="bar">
+        <div class="btns">
+            <button class="button is-primary is-light is-small" onclick="save()">Save Code</button>
+            <button  class="button is-primary is-light is-small" onclick="run()">Run Code</button>
+        </div>
+
+        <input class="input is-primary is-small" id="inp" type="text" placeholder="Add Input">
+    </div>
+    <div class="out">
+        <div class="outp">
+            <a onclick="terminal()">Terminal</a>
+            <a onclick="fsx()">Files</a>
+        </div>
+        <div class="scrolly">
+            <h4 id="output">OUTPUT:</h4>
+        </div>
+
+    </div>
+
+    <div id="files" style="overflow-y: scroll; height: 20vh;display: none;">
+        <pre id="list">
+
+
+        </pre>
+    </div>
+
+</body>
+
+<script src="./script.js"></script>
+</html>
