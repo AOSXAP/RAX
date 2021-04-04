@@ -56,7 +56,7 @@ function save(){
     //get value of #txtarea
         const newtext = document.querySelector("#txtarea").value; 
     //save file
-        let existsError = Methods.save(newtext,pathx,rpath);
+        Methods.save(newtext,pathx,rpath);
 }
 
 function run(){

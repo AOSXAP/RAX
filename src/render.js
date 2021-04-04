@@ -11,7 +11,7 @@ const save = path.join(__dirname,"/History",'/history.json');
 //Menu for opening files
 async function Menu(){
     let pathx = path.dirname(__dirname);
-    if(!historyFile) historyFile = [];
+    if(!historyFile) {historyFile = []; Menu();}
     console.log(historyFile)
     
     //Selection Menu
