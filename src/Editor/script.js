@@ -7,6 +7,7 @@ let path = require('path');
 let historyFile = require('../History/history.json');
 let fsops = require('../../functions/fsops');
 let methods = require('./methods/Methods');
+let pref = require('../History/preferances.json');
 
 //classes and helpers
 let hashTable = [];
@@ -19,6 +20,10 @@ let outpath = path.dirname(pathx); let rpath = path.join(outpath+"/"+"index.out"
 
 
 async function load(){
+    document.documentElement.style.setProperty('--main-bg-color',pref.main_color)
+    document.documentElement.style.setProperty('--secondary-color',pref.secondary_color)
+    document.documentElement.style.setProperty('--third-color',pref.third_color)
+
     fs.readFile(pathx, 'utf-8' , async(err,data) => {
         console.log(data);
         document.getElementById("txtarea").innerHTML = data;

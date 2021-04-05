@@ -7,7 +7,7 @@ const fsops = require('../functions/fsops');
 const historyFile = require('./History/history.json');
 const Helper = new fsops.Operations();
 const save = path.join(__dirname,"/History",'/history.json');
-
+const pref = require('./History/preferances.json');
 //Menu for opening files
 async function Menu(){
     let pathx = path.dirname(__dirname);
@@ -42,6 +42,14 @@ async function Menu(){
 }   
 
 function load(){
+    document.documentElement.style.setProperty('--main-bg-color',pref.main_color);
+    document.documentElement.style.setProperty('--secondary-color',pref.secondary_color);
+    document.documentElement.style.setProperty('--third-color',pref.third_color);
+
+    document.getElementById("primary").value = pref.main_color;
+    document.getElementById("secondary").value = pref.secondary_color;
+    document.getElementById("third").value = pref.third_color;
+
     //document.documentElement.style.setProperty('--main-bg-color','pink')
     //verify if fileHistory exists and reload if error
     const fileHistoryV = fs.existsSync(__dirname + "/History/history.json");
@@ -72,7 +80,6 @@ function load(){
     //if element is selected from history , load it
     var elements = document.querySelectorAll("h6");
     elements.forEach((el) => {
-        console.log(el);
         el.addEventListener('click',() => {
             const newOBJ = {path:el.innerText,time:Date.now()}
             const newArray = [...historyFile,newOBJ];
@@ -83,4 +90,24 @@ function load(){
 
 }
 
+//color theme
 
+
+//Needs urgent optimization
+document.getElementById("primary").addEventListener("change", () => {
+    let el = document.getElementById("primary").value; pref.main_color = el;
+    Helper.writeFile(__dirname + '/History/preferances.json',JSON.stringify(pref));
+    document.documentElement.style.setProperty('--main-bg-color',el)
+})
+
+document.getElementById("secondary").addEventListener("change", () => {
+    let el = document.getElementById("secondary").value; pref.secondary_color = el;
+    Helper.writeFile(__dirname + '/History/preferances.json',JSON.stringify(pref));
+    document.documentElement.style.setProperty('--secondary-color',el)
+})
+
+document.getElementById("third").addEventListener("change", () => {
+    let el = document.getElementById("third").value; pref.third_color = el;
+    Helper.writeFile(__dirname + '/History/preferances.json',JSON.stringify(pref));
+    document.documentElement.style.setProperty('--third-color',el)
+})

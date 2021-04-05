@@ -1,4 +1,10 @@
-*{background-color: #292828;font-family: monospace;}
+:root {
+    --main-bg-color: #292828;
+    --secondary-color:#00c1a4;
+    --third-color:#ffffff;
+  }
+
+*{background-color: var(--main-bg-color);font-family: monospace;color: var(--third-color);}
 
 ::-webkit-scrollbar{
     display: none;
@@ -18,8 +24,8 @@ body{
 .txtarea{
     width: 100%;
     height: 50vh;
-    background-color: #292828;
-    color: white;
+    background-color: var(--main-bg-color);
+    color: var(--third-color);
     font-size: 13px;
 }
 
@@ -34,9 +40,9 @@ body{
 
 #output{
     padding: 5px 20px;
-    color: #00c1a4;
+    color: var(--secondary-color);
     width: 100%;
-    border: 0.1px solid #00c1a4;
+    border: 0.1px solid var(--secondary-color);
     border-radius: 5px;
     font-size: .75rem;
     margin-top: 20px;
@@ -46,16 +52,16 @@ body{
 
 
 #inp{
-    background-color: #292828;
-    color: #00c1a4;
+    background-color: var(--main-bg-color);
+    color: var(--secondary-color);
 
 }
 
-#inp::placeholder{color:#00c1a4}
+#inp::placeholder{color:var(--secondary-color)}
 
 .idxx{
     padding: 0px 20px;
-    color:#00c1a4;
+    color:var(--secondary-color);
     font-size: 18px;
 }
 
@@ -68,12 +74,12 @@ body{
 
 .outp a{
     padding: 0 20px 0 0;
-    color:#00c1a4;
+    color:var(--secondary-color);
     font-size: 13px;
 }
 
 .outp a:hover{
-    color: white;
+    color: var(--third-color);
     text-decoration: underline;
 }
 
@@ -84,18 +90,18 @@ body{
 
 #files{
     margin: 5px 20px;
-    color: #00c1a4;
-    border: 0.1px solid #00c1a4;
+    color: var(--secondary-color);
+    border: 0.1px solid var(--secondary-color);
     border-radius: 5px;
     font-size: .75rem;
     margin-top: 20px;
-    background-color: #292828;
+    background-color: var(--main-bg-color);
 }
 
 
 #list{
-    color: #00c1a4;
-    background-color: #292828;
+    color: var(--secondary-color);
+    background-color: var(--main-bg-color);
     padding: 0;
     margin: 0;
     border: 0;
@@ -104,3 +110,12 @@ body{
 #list p {transform: translateY(-35px);}
 
 
+.rrc,.rrc:focus,.rrc:hover{
+    border-color: var(--secondary-color);
+}
+
+.btnxy,.btnxy:hover{
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+}
