@@ -32,7 +32,6 @@ async function Menu(){
     //If no error
     if(selectedPaths.canceled == false){
         //Add file to json History file and load Editor
-        console.log([...historyFile,newOBJ]);
         const newArray = [...historyFile,newOBJ];
         Helper.writeFile(save, JSON.stringify(newArray));
         window.location.href = "./Editor/index.html";
@@ -43,16 +42,15 @@ async function Menu(){
 }   
 
 function load(){
+    //document.documentElement.style.setProperty('--main-bg-color','pink')
     //verify if fileHistory exists and reload if error
     const fileHistoryV = fs.existsSync(__dirname + "/History/history.json");
-    console.log(fileHistoryV);
     
     try {
         let r = fs.readFileSync(__dirname + "/History/history.json",'utf-8');
         if(r == "") {fs.writeFileSync(__dirname + "/History/history.json" , "[]");load();}
         
     } catch (error) {
-        console.log(error);
         fs.writeFileSync(__dirname + "/History/history.json" , "[]");
         load();
     }
@@ -62,8 +60,9 @@ function load(){
     if(fileHistoryV){
         for(let i = 1;i<=3;i++){
                 const pathx = historyFile[historyFile['length']-i].path;
+                var timex = new Date(historyFile[historyFile['length']-i].time);
                 var node = document.createElement("H6"); 
-                var textnode = document.createTextNode(pathx);
+                var textnode = document.createTextNode(pathx + " - " + timex.toLocaleString());
                 node.appendChild(textnode);
                 document.getElementById("last").appendChild(node);
         

@@ -1,6 +1,11 @@
+:root {
+  --main-bg-color: #292828;
+  --secondary-color:#00c1a4;
+}
+
 body {
   font-family: monospace;
-  background-color: #292828;
+  background-color: var(--main-bg-color);
   color: white;
   width: 100%;
   height: 100vh;
@@ -24,7 +29,7 @@ body {
 }
 
 .texth1 a{
-  color:#00c1a4;
+  color:var(--secondary-color);
 }
 
 .texth2{
@@ -62,17 +67,22 @@ body {
 
 #last h6{
   font-size: 13px;
-  color:#00c1a4;
+  color:var(--secondary-color);
   padding-top: 10px;
 }
 
+#last h6:hover{
+  color: white;
+  cursor: pointer;
+}
+
 .heart{
-  color:#00c1a4;
+  color:var(--secondary-color);
   font-size: 20px;
 }
 
 .gtxt{
-  color: #00c1a4;
+  color: var(--secondary-color);
 }
 
 .gtxt:hover{
