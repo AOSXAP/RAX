@@ -1,6 +1,6 @@
 # RAX
 
-## An Open Source C++ IDE made via web technologies.
+### An Open Source C++ IDE made via web technologies.
 
 ### Use "npm install" to get all dependencies. You should also have g++ compiler installed.
 
