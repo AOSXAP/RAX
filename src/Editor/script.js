@@ -29,7 +29,36 @@ async function load(){
 
     //display files from the file directory
     Methods.display();
-};
+
+    [...document.getElementsByTagName('p')].forEach((item) => {
+        if(item.id == pathx){
+            item.style.color = "white";
+        }
+        item.addEventListener('click', () => {
+
+            console.log(item);
+
+            let pathData = [item.id,item.id.slice(-3)];
+
+            if(pathData[1] == "cpp"){
+
+                console.log("invocation");
+                
+                fs.readFile(pathData[0], 'utf-8' , async(err,datax) => {
+                    if(err) console.log(err);
+
+                    else document.querySelector("#txtarea").value = datax;
+                    [...document.getElementsByTagName('p')].forEach((item) => {
+                        item.style.color="#00c1a4";
+                    })
+                    pathx = pathData[0];item.style.color = "white";    
+                })
+            }
+        })
+    })
+
+}
+
 
 
 function save(){
@@ -67,3 +96,5 @@ document.getElementById('txtarea').addEventListener('keydown', function(e) {
 document.getElementById("sendxx").addEventListener("click",()=>{
     window.location.href="../index.html";
 })
+
+

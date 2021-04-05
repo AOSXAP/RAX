@@ -15,7 +15,7 @@ class Methods{
 
         for(let i = 0; i<files.length;i++){
 
-            let obj = {path:x,file:files[i]};
+            let obj = {path:x,file:files[i],root:path};
 
             this.hashTable.push(obj);
 
@@ -34,7 +34,11 @@ class Methods{
 
             var node = document.createElement("P"); var textnode = document.createTextNode(string);
 
-            node.appendChild(textnode); document.getElementById("list").appendChild(node);
+            node.setAttribute("id",hashTable[i].root + "/" + hashTable[i].file);
+
+            node.appendChild(textnode); 
+
+            document.getElementById("list").appendChild(node);
 
         }
     }
