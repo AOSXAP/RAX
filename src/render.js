@@ -62,7 +62,7 @@ function load(){
                 const pathx = historyFile[historyFile['length']-i].path;
                 var timex = new Date(historyFile[historyFile['length']-i].time);
                 var node = document.createElement("H6"); 
-                var textnode = document.createTextNode(pathx + " - " + timex.toLocaleString());
+                var textnode = document.createTextNode(pathx );
                 node.appendChild(textnode);
                 document.getElementById("last").appendChild(node);
         
