@@ -4,7 +4,7 @@
 
 ### An Open Source C++ IDE made via web technologies.
 
-### Use "npm install" to get all dependencies. You should also have g++ compiler installed.
+#### Use "npm install" to get all dependencies. You should also have g++ compiler installed.
 
 Use "npm start" to preview RAX or "npm run make" to build it. 
 
