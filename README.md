@@ -8,7 +8,7 @@ Use "npm start" to preview RAX or "npm run make" to build it.
 
 Feel free to contribute to the repo.
 
-Imgur Gallery : https://imgur.com/gallery/cjIU8Mh
+Imgur Gallery : https://imgur.com/a/RDYV1TN
 
 
 <img src="https://i.imgur.com/NZSZ6m1.png"></img>
