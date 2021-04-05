@@ -22,6 +22,4 @@ You can also make your own themes!
 
 <img src="https://i.imgur.com/T0sbmUC.png"></img>
 
-<img src="https://i.imgur.com/rxcz5iI.png"></img>
-
 Also, more features are on the way ! 😉
