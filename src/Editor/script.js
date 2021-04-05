@@ -54,9 +54,9 @@ async function load(){
 
                     else document.querySelector("#txtarea").value = datax;
                     [...document.getElementsByTagName('p')].forEach((item) => {
-                        item.style.color="#00c1a4";
+                        item.style.color=pref.secondary_color;
                     })
-                    pathx = pathData[0];item.style.color = "white";    
+                    pathx = pathData[0];item.style.color = pref.third_color;    
                 })
             }
         })
