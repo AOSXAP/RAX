@@ -12,11 +12,16 @@ Feel free to contribute to the repo.
 
 Imgur Gallery : https://imgur.com/a/RDYV1TN
 
-<img src="https://i.imgur.com/NZSZ6m1.png"></img>
+<img src="https://imgur.com/vkYcECd"></img> 
+
+<img src="https://imgur.com/cb05eyY"></img>
 
 The code editor facilitates the ease of file switching, minimalist and cute UI and also fast code writing.
 
+You can also make your own themes!
+
+<img src="https://imgur.com/T0sbmUC"></img>
+
+<img src="https://imgur.com/rxcz5iI"></img>
+
 Also, more features are on the way ! 😉
-
-<img src="https://i.imgur.com/JQ1VvxC.png"></img>
-
