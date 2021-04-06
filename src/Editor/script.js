@@ -19,7 +19,8 @@ let pathx = historyFile[historyFile['length']-1].path;
 let outpath = path.dirname(pathx); let rpath = path.join(outpath+"/"+"index.out");
 
 
-async function load(){
+async function load(){ 
+    document.getElementById("timey").innerHTML = Date();
     document.documentElement.style.setProperty('--main-bg-color',pref.main_color)
     document.documentElement.style.setProperty('--secondary-color',pref.secondary_color)
     document.documentElement.style.setProperty('--third-color',pref.third_color)
@@ -102,4 +103,23 @@ document.getElementById("sendxx").addEventListener("click",()=>{
     window.location.href="../index.html";
 })
 
+var now = new Date().getTime();
 
+//time script
+setInterval(()=> {
+    var newDate = new Date().getTime();
+    var timePast = newDate - now;
+
+    var hours = Math.floor((timePast % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timePast % (1000 * 60 * 60)) / (1000 * 60)); var seconds = Math.floor((timePast % (1000 * 60)) / 1000);
+    var time = [hours,minutes,seconds];
+
+    for(let i = 0 ; i <= 2 ; i++){
+        if(time[i]<=9){
+            time[i] = "0"+time[i];
+        }
+    }
+
+    document.getElementById("timex").innerHTML = `${time[0]}:${time[1]}:${time[2]}`;
+    document.getElementById("timey").innerHTML = Date();
+},1000)

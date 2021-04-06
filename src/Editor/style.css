@@ -119,3 +119,23 @@ body{
     background-color: var(--secondary-color);
     color: var(--third-color);
 }
+
+#tdiv{
+    display: flex;
+    padding-left: 15px;
+}
+
+#timex{
+    padding-left: 3px;
+}
+
+.gx,#timey{
+    color: var(--secondary-color);
+    font-size: .75rem;
+}
+
+#rctime{
+    height: 5vh;
+    display: flex;
+    padding:0 20px;
+}
