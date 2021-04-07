@@ -66,7 +66,7 @@ function terminal(){(() => Methods.switchx("none","block"))()}
 let keys = [')','(',';','>','<'];
 
 document.getElementById('txtarea').addEventListener('keydown', function(e) {
-
+    document.execCommand('foreColor', false, 'white');
     //Dynamic Highlighting
     for(i in keys){
         if(e.key == keys[i]){
@@ -84,5 +84,5 @@ var now = new Date().getTime();
 
 //time script
 setInterval(()=> {
-    Methods.timeHandler()
+    Methods.timeHandler();
 },1000)
