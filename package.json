@@ -10,7 +10,7 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "winx":"electron-forge package --platform win32"
+    "winx": "electron-forge package --platform win32"
   },
   "keywords": [],
   "author": "aosx",

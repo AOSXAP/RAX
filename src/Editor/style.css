@@ -112,6 +112,11 @@ body{
 
 .rrc,.rrc:focus,.rrc:hover{
     border-color: var(--secondary-color);
+    color: white;
+}
+
+pre{
+    text-decoration: none;
 }
 
 .btnxy,.btnxy:hover{
