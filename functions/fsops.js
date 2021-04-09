@@ -12,7 +12,7 @@ class Operations{
 
     allFiles(file){
         fs.readdir(file,(err,data)=>{
-            if(err) error(err);
+            if (err) error(err);
             else console.log(data);
         })
     }
